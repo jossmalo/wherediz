@@ -1,0 +1,111 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Wherediz?</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://wherediz.com"> Wherediz </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+	
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- End Navigation -->
+
+<!-- start main container -->
+<div class="container theme-showcase" role="main">
+
+
+	<br /> <br /> <br />
+	<h3>What is wherediz?</h3>
+
+	<p>Wherediz provides a scriptable utility to determine the geographic location of an IP address.  Simply pass an IP address using curl to get a response of the location.</p>
+	<p>Example:
+		<div class="well">		
+			<code>
+				$ curl wherediz.com/8.8.8.8 <br />
+				8.8.8.8: Mountain View, California, United States
+			</code>
+		</div>
+	</p>
+
+	<p>Wherediz is designed to be script friendly if you need to get locations of a list of IPs, for example:
+                <div class="well">
+                        <code>
+				$ cat ip_list.txt <br />
+				216.218.134.12 <br />
+				216.218.222.12 <br />
+				216.230.148.77 <br />
+				217.23.13.129 <br />
+				217.64.42.212 <br />
+				217.115.10.131 <br />
+				217.115.10.132 <br />
+				217.170.201.106 <br />
+				<br />
+				$ for i in $(cat ip_list.txt); do curl wherediz.com/$i ; done <br />
+				216.218.134.12: Fremont, California, United States <br />
+				216.218.222.12: Fremont, California, United States <br />
+				216.230.148.77: Guatemala <br />
+				217.23.13.129: Netherlands <br />
+				217.64.42.212: Helsinki, Uusimaa, Finland <br />
+				217.115.10.131: Germany <br />
+				217.115.10.132: Germany <br />
+				217.170.201.106: Oslo, Oslo County, Norway
+                        </code>
+                </div>
+	</p>
+
+	<h3>Options</h3>
+	<p>Currently wherediz only has a few options, to review them pass /help
+                <div class="well">
+                        <code>
+
+				$ curl wherediz.com/help <br />
+				/[ip] - Shows the location of the IP Address <br />
+				/json/[ip] - Provide a little more information in json format <br />
+				/help - Show this message <br />
+				/about - About this project <br />
+
+                        </code>
+                </div>
+	</p>
+
+
+	<h3>About</h3>
+	<p>Wherediz was created by Aaron 'Dirty' Bennett in 2015 and is currently maintained by Joss Malasuk.  
+	<br />
+	Please reach out if you run into any issues.</p>	
+
+	<p> <br /> </p>
+
+
+	<p>
+		This utility includes GeoLite data created by MaxMind, available from <a href="http://www.maxmind.com">http://www.maxmind.com</a>.
+	</p>
+
+</div>
+<!-- end main container -->
+    <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </body>
+</html>
