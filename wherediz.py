@@ -16,7 +16,7 @@ reader = geoip2.database.Reader('/var/www/wherediz.com/web/GeoLite2-City.mmdb')
 txt_version = "1.0.0"
 new_line = "\n"
 txt_help = "/[ip] - Shows the location of the IP Address \n/json/[ip] - Provide a little more information in json format\n/help - Show this message\n/about - About this project\n"
-txt_about = "Created by Aaron 'Dirty' Bennett in 2015\n"
+txt_about = "Created by Aaron 'Dirty' Bennett in 2015\nFor more information please visit wherediz.com\n"
 
 txt_error_not_valid_ip = " is not a valid IPv4 address. ?_?"
 txt_error_unknown = "Unknown"
